@@ -23,6 +23,7 @@ public class LiquidContainer : ContainerBase, IHazardNotifier
             
         }
     }
+    
     public void DangerousSituationAlert(string serialNumber, string percentage)
     {
         
@@ -33,6 +34,10 @@ public class LiquidContainer : ContainerBase, IHazardNotifier
                 + "More than " + percentage + " of max weight exceeded while carrying hazardous materials!!!"
             );
         }
+        else if (percentage.Equals(""))
+        {
+            Console.WriteLine("Dangerous situation currently in Container no.: " + serialNumber);
+        }
         else
         {
             Console.WriteLine(
@@ -41,4 +46,5 @@ public class LiquidContainer : ContainerBase, IHazardNotifier
             );
         }
     }
+    
 }

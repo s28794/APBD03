@@ -30,7 +30,7 @@ public abstract class ContainerBase
         SerialNumber = "KON" + "-" + containerType + "-" + Id;
     }
 
-    public void EmptyTheContainer()
+    public virtual void EmptyTheContainer()
     {
         CargoWeight = 0;
 
